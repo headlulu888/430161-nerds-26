@@ -5,7 +5,6 @@
   <title>Страница каталога</title>
 </head>
 <body>
-
   <header>
     <nav>
       <a href="index.html">
@@ -35,64 +34,71 @@
     </section>
     <aside>
       <h2>Фильтры</h2>
-      <section>
-        <form action="#" method="POST">
-          <fieldset>
-            <legend>Стоимость:</legend>
-            <p>
-              <input type="range" name="btn-range" min="0" max="15000">
-            </p>
-            <p>
-              <label for="from-field">От</label>
-              <input type="number" min="0" max="15000" name="from-field" id="from-field">
-              <label for="before-field">До</label>
-              <input type="number" min="0" max="15000" name="before-field" id="before-field">
-            </p>
-            <p></p>
-          </fieldset>
-          <fieldse>
-            <legend>Сетка:</legend>
-            <p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Стоимость:</legend>
+          <div>
+            <!-- Блок для range -->
+            <div>
+              <!-- Блок для полоски -->
+              <span style="width: 65%;"></span>
+            </div>
+            <!-- Переключатели(кружки) -->
+            <span class="range-min"></span>
+            <span class="range-max"></span>
+          </div>
+          <div>
+            <!-- Блок для price -->
+            <label for="from-field">От</label>
+            <input type="number" min="0" max="15000" name="from-field" id="from-field">
+            <label for="before-field">До</label>
+            <input type="number" min="0" max="15000" name="before-field" id="before-field">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul>
+            <li>
               <input type="radio" name="response-btn" id="response-btn">
               <label for="response-btn">Адаптивная</label>
-            </p>
-            <p>
+            </li>
+            <li>
               <input type="radio" name="fixed-btn" id="fixed-btn">
               <label for="fixed-btn">Фиксированная</label>
-            </p>
-            <p>
+            </li>
+            <li>
               <input type="radio" name="rubber-btn" id="rubber-btn">
               <label for="rubber-btn">Резиновая</label>
-            </p>
-          </fieldse>
-          <fieldset>
-            <legend>Особенности:</legend>
-            <ul>
-              <li>
-                <input type="checkbox" checked name="slider-btn" id="slider-btn">
-                <label for="slider-btn">Слайдер</label>
-              </li>
-              <li>
-                <input type="checkbox" name="advantege-btn" id="advantege-btn">
-                <label for="advantege-btn">Блок преимуществ</label>
-              </li>
-              <li>
-                <input type="checkbox" checked name="news-btn" id="news-btn">
-                <label for="news-btn">Новости</label>
-              </li>
-              <li>
-                <input type="checkbox" name="gallery-btn" id="gallery-btn">
-                <label for="gallery-btn">Галерея</label>
-              </li>
-              <li>
-                <input type="checkbox" name="trash-btn" id="trash-btn">
-                <label for="trash-btn">Корзина</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button type="submit">Показать</button>
-        </form>
-      </section>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Особенности:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" checked name="slider-btn" id="slider-btn">
+              <label for="slider-btn">Слайдер</label>
+            </li>
+            <li>
+              <input type="checkbox" name="advantege-btn" id="advantege-btn">
+              <label for="advantege-btn">Блок преимуществ</label>
+            </li>
+            <li>
+              <input type="checkbox" checked name="news-btn" id="news-btn">
+              <label for="news-btn">Новости</label>
+            </li>
+            <li>
+              <input type="checkbox" name="gallery-btn" id="gallery-btn">
+              <label for="gallery-btn">Галерея</label>
+            </li>
+            <li>
+              <input type="checkbox" name="trash-btn" id="trash-btn">
+              <label for="trash-btn">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
     </aside>
     <section>
       <h2>Список товаров</h2>
@@ -100,7 +106,7 @@
         <h3>Сортировать</h3>
         <ul>
           <li>
-            <a href="#">По цене</a>
+            <a href="#" class="active">По цене</a>
           </li>
           <li>
             <a href="#">По типу</a>
@@ -109,14 +115,10 @@
             <a href="#">По названию</a>
           </li>
           <li>
-            <a href="#">
-              <span>Меньше</span>
-            </a>
+            <a href="#" class="active">Меньше</a>
           </li>
           <li>
-            <a href="#">
-              <span>Больше</span>
-            </a>
+            <a href="#">Больше</a>
           </li>
         </ul>
       </div>
@@ -125,7 +127,7 @@
         <div>
           <h3>Sedona</h3>
           <p>Информационный сайт для туристов</p>
-          <a href="">9900 руб.</a>
+          <a href="#">9900 руб.</a>
         </div>
       </article>
       <article>
@@ -133,15 +135,15 @@
         <div>
           <h3>Pink App</h3>
           <p>Продуктовый лендинг приложения для iOS и Android</p>
-          <a href="">9900 руб.</a>
+          <a href="#">9900 руб.</a>
         </div>
       </article>
       <article>
         <img src="img/catalog-pic3.jpg" width="360" height="576" alt="Картинка сайта Borodinski">
         <div>
           <h3>Barbershop</h3>
-          <p>Сайт салона красоты.Для мужчин, да.</p>
-          <a href="">9900 руб.</a>
+          <p>Сайт салона красоты. Для мужчин, да.</p>
+          <a href="#">9900 руб.</a>
         </div>
       </article>
       <article>
@@ -149,7 +151,7 @@
         <div>
           <h3>MISHKA</h3>
           <p>Интернет-магазин вязаных игрушек</p>
-          <a href="">9900 руб.</a>
+          <a href="#">9900 руб.</a>
         </div>
       </article>
       <article>
@@ -157,7 +159,7 @@
         <div>
           <h3>A Plus</h3>
           <p>Лендинг курсов повышения квалификации</p>
-          <a href="">9900 руб.</a>
+          <a href="#">9900 руб.</a>
         </div>
       </article>
       <article>
@@ -165,7 +167,7 @@
         <div>
           <h3>КВАСТ</h3>
           <p>Промо-сайт производителя крафтового кваса</p>
-          <a href="">9900 руб.</a>
+          <a href="#">9900 руб.</a>
         </div>
       </article>
       <ul>
@@ -186,10 +188,7 @@
 
     <section>
       <h2>Как до нас добраться</h2>
-      <div>
-        <div>
-          <!-- Div для карты фоном-->
-        </div>
+      <div> <!-- TODO Тут карта-->
         <div>
           <h3>Nёrds design studio</h3>
           <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
@@ -202,7 +201,6 @@
 
   <footer>
     <h2>Мы в социальных сетях</h2>
-
     <ul>
       <li>
         <a href="#">Вконтакте</a>
@@ -214,7 +212,6 @@
         <a href="#">Инстаграм</a>
       </li>
     </ul>
-
     <div>
       <h3>Давайте дружить, это выгодно!</h3>
       <p>Скидка 10% для друзей из социальных сетей.</p>
@@ -224,7 +221,7 @@
   <section>
     <h2>Напишите нам</h2>
     <button type="button">Закрыть</button>
-    <form action="#" method="POST">
+    <form action="#" method="post">
       <label for="first-last-name">
         <span>Ваше имя:</span>
         <input type="text" name="first-last-name" id="first-last-name" placeholder="Имя Фамилия">
@@ -235,13 +232,12 @@
       </label>
       <label for="text-field">
         <span>Текст письма:</span>
-        <textarea type="text" name="text-field" id="text-field" placeholder="В свободной форме"></textarea>
+        <textarea name="text-field" id="text-field" placeholder="В свободной форме"></textarea>
       </label>
       <button type="submit">
         Отправить
       </button>
     </form>
   </section>
-
 </body>
 </html>
