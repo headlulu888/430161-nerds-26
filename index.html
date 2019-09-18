@@ -31,16 +31,16 @@
   <main>
     <section>
       <h2>Слайдер</h2>
-      <div>
+
         <div>
           <label for="radio-1">
-            <input type="radio" id="radio-1">
+            <input type="radio" name="toggle" aria-label="test" id="radio-1">
           </label>
           <label for="radio-2">
-            <input type="radio" id="radio-2">
+            <input type="radio" name="toggle" aria-label="test2" id="radio-2">
           </label>
           <label for="radio-3">
-            <input type="radio" id="radio-3">
+            <input type="radio" name="toggle" aria-label="test3" id="radio-3">
           </label>
         </div>
         <section>
@@ -58,7 +58,7 @@
           <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
           <a href="#">Узнать больше</a>
         </section>
-      </div>
+
     </section>
 
     <section>
@@ -85,7 +85,7 @@
 
     <section>
       <h2>О нас</h2>
-      <div>
+      <article>
         <h3>Мы — маленькая, но гордая дизайн-студия из Краснодара. </h3>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
         <h4>Выполняем заказы на разработку:</h4>
@@ -94,8 +94,8 @@
           <li>Мобильных приложений для iOS и Android</li>
           <li>Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
-      </div>
-      <div>
+      </article>
+      <article>
         <img src="img/about_us.png" width="360" height="208" alt="Картинка студии 'Нёрдс'">
         <p>с 2004 года Любим точность во всем:</p>
         <dl>
@@ -112,7 +112,7 @@
           </dt>
           <dd>Минимальная предоплата</dd>
         </dl>
-      </div>
+      </article>
     </section>
 
     <section>
@@ -175,18 +175,15 @@
     <h2>Напишите нам</h2>
     <button type="button">Закрыть</button>
     <form action="#" method="post">
-      <label for="first-last-name">
-        <span>Ваше имя:</span>
-        <input type="text" name="first-last-name" id="first-last-name" placeholder="Имя Фамилия">
-      </label>
-      <label for="email">
-        <span>Ваш e-mail:</span>
-        <input type="text" name="email" id="email" placeholder="email@example.com">
-      </label>
-      <label for="text-field">
-        <span>Текст письма:</span>
-        <textarea name="text-field" id="text-field" placeholder="В свободной форме"></textarea>
-      </label>
+      <label for="first-last-name">Ваше имя:</label>
+      <input type="text" name="first-last-name" id="first-last-name" placeholder="Имя Фамилия">
+
+      <label for="email">Ваш e-mail:</label>
+      <input type="text" name="email" id="email" placeholder="email@example.com">
+
+      <label for="text-field">Текст письма:</label>
+      <textarea name="text-field" id="text-field" placeholder="В свободной форме"></textarea>
+
       <button type="submit">
         Отправить
       </button>
