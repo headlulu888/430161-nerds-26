@@ -22,6 +22,13 @@ a {
     overflow: hidden;
 }
 
+.container {
+  position: relative;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .btn {
   font-family: inherit;
   font-size: inherit;
@@ -42,14 +49,27 @@ a {
   background-color: #d7373b;
 }
 
+.main-header {
+  background-color: #eeeeee;
+}
+
 .main-navigation {
   line-height: 30px;
   font-weight: 500;
-  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
 }
 
 .header-navigation {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.header-navigation li:not(:last-child) {
+  margin-right: 50px;
 }
 
 .studio-title {
@@ -191,6 +211,7 @@ a {
 
 .footer-socials {
   list-style: none;
+  padding-left: 0;
 }
 
 .socials-item {
@@ -285,7 +306,7 @@ a {
   list-style: none;
 }
 
-.sort-list active,
+.sort-list:active,
 .sort-list li a:active {
   color: rgba(0, 0, 0, 1);
 }
@@ -310,7 +331,7 @@ a {
 
 .catalog-item h3:hover,
 .catalog-item h3:focus {
-  color: rgba(251, 86, 90);
+  color: rgba(251, 86, 90, 1);
 }
 
 .catalog-item h3:active {
@@ -333,7 +354,7 @@ a {
 .pagination-item a {
   font-weight: 500;
   line-height: 18px;
-  color: rgba(0, 0, 0);
+  color: rgba(0, 0, 0, 1);
   background-color: #eeeeee;
 }
 
@@ -373,4 +394,12 @@ a {
 .filter .form-btn:active {
   color: rgba(0, 0, 20, 0.3);
   background-color: #d5d5d5;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 20px;
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
 }
