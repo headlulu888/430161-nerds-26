@@ -72,10 +72,15 @@ a {
   margin-right: 50px;
 }
 
+.studio {
+  display: flex;
+}
+
 .studio-title {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
+  text-transform: initial;
 }
 
 .studio-content p {
@@ -142,6 +147,30 @@ a {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
+}
+
+.advantages {
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid #d7dcde;
+}
+
+.advantage-info {
+  line-height: 24px;
+  text-transform: initial;
+  width: 255px;
+}
+
+.advantage-item .btn {
+  padding: 18px 41px;
+  border-radius: 2px;
+  margin-top: 35px;
+  display: inline-block;
+}
+
+.advantage-item:not(:last-child) {
+  margin-right: 100px;
 }
 
 .advantage-title {
@@ -212,11 +241,51 @@ a {
 .footer-socials {
   list-style: none;
   padding-left: 0;
+  display: flex;
 }
 
 .socials-item {
-  color: #ffffff;
+  /*color: #ffffff;*/
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
   background-color: #e1e1e1;
+}
+
+.socials-item {
+  margin-right: 10px;
+}
+
+.socials-vk {
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position: 50% 50%;
+}
+
+.socials-fb {
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position: 50% 50%;
+}
+
+.socials-inst {
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/insta-icon.svg");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position: 50% 50%;
+}
+
+.footer-info {
+  align-self: center;
+  margin-left: 140px;
 }
 
 .footer-info h3 {
@@ -224,10 +293,12 @@ a {
   line-height: 36px;
   font-weight: 700;
   text-transform: none;
+  margin: 0;
 }
 
 .footer-info p {
   line-height: 22px;
+  text-transform: initial;
 }
 
 .modal-title {
@@ -402,4 +473,16 @@ a {
   padding: 45px 20px;
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
+  margin-top: 76px;
+  margin-bottom: 76px;
+}
+
+.main-footer {
+  display: flex;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.modal {
+  display: none;
 }
