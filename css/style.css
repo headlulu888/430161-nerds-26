@@ -58,7 +58,7 @@ a {
   font-weight: 500;
   display: flex;
   justify-content: space-between;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .header-navigation {
@@ -146,6 +146,14 @@ a {
   margin-left: 0;
   text-transform: initial;
   margin-top: 27px;
+}
+
+.header-basket {
+  align-self: center;
+}
+
+.header-navigation {
+  align-items: center;
 }
 
 .header-navigation a,
@@ -256,10 +264,11 @@ a {
 }
 
 .advantage-item .btn {
-  padding: 18px 41px;
+  padding: 16px 41px;
   border-radius: 2px;
   margin-top: 35px;
   display: inline-block;
+  line-height: 18px;
 }
 
 .advantage-item:not(:last-child) {
@@ -324,9 +333,12 @@ a {
 }
 
 .contacts-info {
-  display: inline-block;
+  /*display: inline-block;*/
   padding: 50px 48px;
   position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #eeeeee;
 }
 
 .contacts-info p {
@@ -337,6 +349,8 @@ a {
 
 .contacts-map {
   position: relative;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .map-marker {
@@ -453,6 +467,14 @@ a {
 
 /*Contacts*/
 
+.filter {
+  width: 260px;
+}
+
+.filter form {
+  margin-top: 60px;
+}
+
 .filter form label {
   font-size: 18px;
   line-height: 30px;
@@ -471,6 +493,28 @@ a {
 .grid-item {
   color: #283136;
   line-height: 20px;
+}
+
+.grid-item input[type=radio] {
+  display: none;
+}
+
+.grid-item input[type=radio]:checked ~ label::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.grid-item label {
+  padding-left: 35px;
+  position: relative;
+}
+
+.grid-item label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
 }
 
 .grid-item input:hover + label,
@@ -509,6 +553,16 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.catalog-item {
+  height: 576px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.catalog-item:hover div {
+  display: block;
+}
+
 .catalog-item h3 {
   font-size: 18px;
   line-height: 30px;
@@ -530,12 +584,33 @@ a {
   color: #666666;
 }
 
+.catalog-item div {
+  position: absolute;
+  bottom: 0;
+  background-color: #eeeeee;
+  width: 360px;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 28px;
+  display: none;
+}
+
+.catalog-item div p {
+  margin-bottom: 30px;
+}
+
+.btn-price {
+  padding: 19px 60px;
+  border-radius: 5px;
+}
+
 .btn-price:active {
   color: #ffffff;
 }
 
 .pagination-list {
   list-style: none;
+  flex-basis: 100%;
 }
 
 .pagination-item a {
@@ -635,8 +710,20 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 760px;
 }
 
 .catalog-sort {
   flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 42px 0;
+}
+
+.sort-list {
+  display: flex;
+}
+
+.sort-list li:not(:last-child) {
+  margin-right: 25px;
 }
